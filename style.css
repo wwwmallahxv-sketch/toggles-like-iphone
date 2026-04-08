@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fa {
+    margin: 2px;
+    transition: none;
+    min-width: 26px;
+    text-align: center;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #0056cb, #87ceeb);
+}
+
+.box {
+    display: grid;
+    gap: 10px;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    width: 300px;
+}
+
+.box h1 {
+    text-align: center;
+}
+
+.box label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 7px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.box label:hover{
+    background-color: #ccc;
+}
+
+.box label input {
+    appearance: none;
+    display: none;
+}
+
+.box label .fa,
+.box label span {
+    font-size: 20px;
+}
+
+.box .check {
+    width: 36px;
+    height: 20px;
+    background-color: #aaa;
+    border-radius: 12px;
+    padding: 2px;
+}
+
+.check .circle {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.box label input:checked ~.check{
+    background-color: #0056cb;
+}
+
+.box label input:checked ~.check .circle{
+    margin-left: 16px;
+}
